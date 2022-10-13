@@ -6,9 +6,9 @@
           <h1 class="is-size-4">WebDrop</h1>
         </b-navbar-item>
         <div class="actions">
-          <b-tooltip :label="internetShare ? 'Joined An Internet Share Room' : 'Share via Internet'" position="is-bottom" :type="internetShare ? 'is-info' : 'is-primary'">
+          <b-tooltip :label="'Join or Create a Room'" position="is-bottom" :type="internetShare ? 'is-info' : 'is-primary'">
             <b-navbar-item tag="router-link" :to="{ path: '/room' }">
-              <a class="button is-text" v-bind:class="{ 'is-info' : internetShare }" :aria-label="internetShare ? 'Joined An Internet Share Room' : 'Share via Internet'">
+              <a class="button is-text" v-bind:class="{ 'is-info' : internetShare }" :aria-label="'Join or Create a Room'">
                 <earth-icon class="icon is-medium"></earth-icon>
               </a>
             </b-navbar-item>

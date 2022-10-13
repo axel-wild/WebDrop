@@ -67,13 +67,13 @@ const INTERNET_ROOM_CODE_LENGTH = 4
 
 Vue.prototype.$ANNOUNCE_URLS = announceURLs
 Vue.prototype.$INTERNET_ROOM_CODE_LENGTH = INTERNET_ROOM_CODE_LENGTH
-Vue.prototype.$INTERNET_ROOM_SHARE_LINK = 'https://WebDrop.Space/#/?room='
+Vue.prototype.$INTERNET_ROOM_SHARE_LINK = window.location.protocol + '//' + window.location.host + '/#/?room='
 
 Vue.prototype.$p2pt = null
 Vue.prototype.$pf = new PeerFiles()
 
 Vue.prototype.$validateRoomCode = (roomCode: string) => {
-  return roomCode.length === INTERNET_ROOM_CODE_LENGTH
+  return roomCode.length >= INTERNET_ROOM_CODE_LENGTH
 }
 
 store.commit('initSettings')

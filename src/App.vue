@@ -221,7 +221,7 @@ export default {
         console.log(error)
 
         if (warningCount >= stats.total && !trackerConnected && !warningMsg) {
-          warningMsg = this.$buefy.snackbar.open({
+          /*warningMsg = this.$buefy.snackbar.open({
             message: 'We couldn\'t connect to any WebTorrent trackers. Your ISP might be blocking them 🤔',
             position: 'is-top',
             type: 'is-danger',
@@ -236,7 +236,7 @@ export default {
               }
               warningMsg.close()
             }
-          })
+          })*/
         }
       })
 

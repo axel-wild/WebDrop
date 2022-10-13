@@ -105,8 +105,9 @@
                 <p id="drop-area">Drop your files here or click to upload</p>
               </b-upload>
               <center>
-                <p>Open <a href="https://WebDrop.Space">WebDrop.Space</a> on your devices to join this room. Devices under the same WiFi/network will auto join the same room.</p>
-                <p>Do you want to transfer files over internet ?<br/><earth-icon></earth-icon><br/><router-link to="/room">Share Invite Link or Join Room</router-link></p>
+                <p>Open <a v-bind:href="linkWebDrop">{{ linkWebDrop }}</a> on your devices to join this room. Devices under the same WiFi/network will auto join the same room.</p>
+                <!-- <p>Do you want to transfer files over internet ?<br/><earth-icon></earth-icon><br/><router-link to="/room">Share Invite Link or Join Room</router-link></p> -->
+                <p>Thanks to <a href="https://github.com/subins2000">Subin Siby</a></p>
               </center>
             </template>
           </b-table>
@@ -189,8 +190,8 @@
           </div>
           <p v-show="usersCount === 0">
             <center class="content">
-              <p>Open <a href="https://WebDrop.Space">WebDrop.Space</a> on your devices and make sure they are connected to the same WiFi/network.</p>
-              <p>Do you want to transfer files over internet ?<br/><earth-icon></earth-icon><br/><router-link to="/room">Share Invite Link or Join Room</router-link></p>
+              <p>Open <a v-bind:href="linkWebDrop">{{ urlWebDropLink }}</a> on your devices to join this room. Devices under the same WiFi/network will auto join the same room.</p>
+              <!--<p>Do you want to transfer files over internet ?<br/><earth-icon></earth-icon><br/><router-link to="/room">Share Invite Link or Join Room</router-link></p>-->
             </center>
           </p>
           <b-field v-for="(user, userID) in users" :key="userID" grouped group-multiline>
@@ -277,7 +278,8 @@ export default {
 
       speed: '0B',
 
-      tableCheckedRows: []
+      tableCheckedRows: [],
+      linkWebDrop: window.location.href
     }
   },
 

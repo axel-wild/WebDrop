@@ -13,8 +13,8 @@
           <img aria-label="Qr Code Image" v-bind:src="qrURL" />
           <p>Or scan the above Qr Code</p>
         </b-tab-item>
-        <b-tab-item label="Join Room" class="content">
-          <p>Room code is a <b>{{ $INTERNET_ROOM_CODE_LENGTH }}</b> letter word</p>
+        <b-tab-item label="Join or Create Room" class="content">
+          <p>Room code is a word with at least <b>{{ $INTERNET_ROOM_CODE_LENGTH }}</b> letters</p>
           <div class="control is-expanded">
             <input class="input is-info is-medium is-flat" placeholder="Paste the room code here" v-model="internetRoomInput" v-on:keyup.enter="onJoinClick" />
           </div><br/>
