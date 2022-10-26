@@ -252,7 +252,7 @@ export default {
     AndroidMessagesIcon,
     DeleteIcon,
     DevicesIcon,
-    EarthIcon,
+    //EarthIcon,
     FileMultipleIcon,
     FileUploadIcon,
     NotificationClearAllIcon,
