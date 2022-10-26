@@ -214,7 +214,7 @@ export default {
 
       let warningCount = 0
       let trackerConnected = false
-      let warningMsg = false
+      const warningMsg = false
 
       p2pt.on('trackerwarning', (error, stats) => {
         warningCount++
@@ -252,7 +252,6 @@ export default {
     sendSharesState (p2pt, peer) {
       for (const infoHash in this.$store.state.shares) {
         let share = this.$store.state.shares[infoHash]
-
         // only send shares created by me
         if (!share.mine) continue
 
